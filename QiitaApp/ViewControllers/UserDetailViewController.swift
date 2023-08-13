@@ -8,6 +8,7 @@ class UserDetailViewController: UIViewController {
 
     @IBOutlet weak var userIconImageView: UserIconImageView!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userIdLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var followeesStackView: UIStackView!
     @IBOutlet weak var followeesCountLabel: UILabel!
@@ -22,7 +23,7 @@ class UserDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.title = "詳細画面"
+        setupTitle()
         setupTableView()
         setupViews()
         model.fetchArticles(userId: userData?.id)
@@ -39,6 +40,18 @@ class UserDetailViewController: UIViewController {
     
     func setData(_ data: UserData) {
         userData = data
+    }
+    
+    private func setupTitle() {
+        guard let data = userData else { return }
+        var title = ""
+        if let name = data.name {
+            title += name
+        }
+        if let id = data.id {
+            title += "@" + id
+        }
+        navigationItem.title = title
     }
     
     private func updateData(_ data: UserData) {
@@ -59,6 +72,7 @@ class UserDetailViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "ArticleTableViewCell", bundle: nil),forCellReuseIdentifier:"ArticleTableViewCell")
 
     }
@@ -113,6 +127,9 @@ class UserDetailViewController: UIViewController {
     
     private func setupViews() {
         userNameLabel.text = userData?.name
+        if let id = userData?.id {
+            userIdLabel.text = "@" + id
+        }
         descriptionTextView.text = userData?.description
         followeesCountLabel.text = userData?.followeesCount?.description
         followersCountLabel.text = userData?.followersCount?.description
@@ -136,6 +153,10 @@ extension UserDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let article = model.getArticles()[indexPath.row]
         showArticleDetail(with: article)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
     }
 }
 

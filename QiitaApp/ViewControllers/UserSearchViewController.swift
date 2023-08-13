@@ -23,6 +23,7 @@ class UserSearchViewController: UIViewController {
     }
     
     private func setupCollectionView() {
+        collectionView.delegate = self
         collectionView.register(UINib(nibName: "SearchHistoryCollectionViewCell", bundle: nil),forCellWithReuseIdentifier:"SearchHistoryCollectionViewCell")
     }
     
@@ -80,4 +81,10 @@ class UserSearchViewController: UIViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
+}
+
+extension UserSearchViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+           return CGSize(width: 120, height: 120)
+       }
 }

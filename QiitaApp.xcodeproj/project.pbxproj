@@ -88,27 +88,36 @@
 		FD935BD72A870A3D003503F2 /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BD62A870A3D003503F2 /* UserSearchViewController.swift */; };
 		FD935BD82A870A3D003503F2 /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BD62A870A3D003503F2 /* UserSearchViewController.swift */; };
 		FD935BD92A870A3D003503F2 /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BD62A870A3D003503F2 /* UserSearchViewController.swift */; };
-		FD935BDB2A870AA6003503F2 /* UserSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BDA2A870AA6003503F2 /* UserSearchInputView.swift */; };
-		FD935BDC2A870AA6003503F2 /* UserSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BDA2A870AA6003503F2 /* UserSearchInputView.swift */; };
-		FD935BDD2A870AA6003503F2 /* UserSearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BDA2A870AA6003503F2 /* UserSearchInputView.swift */; };
-		FD935BDF2A870AB7003503F2 /* UserSearchInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD935BDE2A870AB7003503F2 /* UserSearchInputView.xib */; };
-		FD935BE02A870AB7003503F2 /* UserSearchInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD935BDE2A870AB7003503F2 /* UserSearchInputView.xib */; };
-		FD935BE12A870AB7003503F2 /* UserSearchInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD935BDE2A870AB7003503F2 /* UserSearchInputView.xib */; };
-		FD935BE32A87102B003503F2 /* UserSearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BE22A87102B003503F2 /* UserSearchButtonView.swift */; };
-		FD935BE42A87102B003503F2 /* UserSearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BE22A87102B003503F2 /* UserSearchButtonView.swift */; };
-		FD935BE52A87102B003503F2 /* UserSearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BE22A87102B003503F2 /* UserSearchButtonView.swift */; };
-		FD935BE72A871035003503F2 /* UserSearchButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD935BE62A871035003503F2 /* UserSearchButtonView.xib */; };
-		FD935BE82A871035003503F2 /* UserSearchButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD935BE62A871035003503F2 /* UserSearchButtonView.xib */; };
-		FD935BE92A871035003503F2 /* UserSearchButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD935BE62A871035003503F2 /* UserSearchButtonView.xib */; };
 		FD935BEB2A871519003503F2 /* UserSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BEA2A871519003503F2 /* UserSearchButton.swift */; };
 		FD935BEC2A871519003503F2 /* UserSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BEA2A871519003503F2 /* UserSearchButton.swift */; };
 		FD935BED2A871519003503F2 /* UserSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD935BEA2A871519003503F2 /* UserSearchButton.swift */; };
 		FD93F2442A8874B8003FE73B /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F2432A8874B8003FE73B /* CacheManager.swift */; };
 		FD93F2452A8874B8003FE73B /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F2432A8874B8003FE73B /* CacheManager.swift */; };
 		FD93F2462A8874B8003FE73B /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F2432A8874B8003FE73B /* CacheManager.swift */; };
+		FD93F2482A88801A003FE73B /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F2472A88801A003FE73B /* String+.swift */; };
+		FD93F2492A88801A003FE73B /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F2472A88801A003FE73B /* String+.swift */; };
+		FD93F24A2A88801A003FE73B /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F2472A88801A003FE73B /* String+.swift */; };
+		FD93F24C2A88C01C003FE73B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F24B2A88C01C003FE73B /* AppTheme.swift */; };
+		FD93F24D2A88C01C003FE73B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F24B2A88C01C003FE73B /* AppTheme.swift */; };
+		FD93F24E2A88C01C003FE73B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F24B2A88C01C003FE73B /* AppTheme.swift */; };
 		FDBE329E2A87A65400B5C680 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE329D2A87A65400B5C680 /* UIImageView+.swift */; };
 		FDBE329F2A87A65400B5C680 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE329D2A87A65400B5C680 /* UIImageView+.swift */; };
 		FDBE32A02A87A65400B5C680 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE329D2A87A65400B5C680 /* UIImageView+.swift */; };
+		FDF8DEEA2A88D8D3004BE4ED /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEE92A88D8D3004BE4ED /* Int+.swift */; };
+		FDF8DEEB2A88D8D3004BE4ED /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEE92A88D8D3004BE4ED /* Int+.swift */; };
+		FDF8DEEC2A88D8D3004BE4ED /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEE92A88D8D3004BE4ED /* Int+.swift */; };
+		FDF8DEEE2A88DB23004BE4ED /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEED2A88DB23004BE4ED /* DateManager.swift */; };
+		FDF8DEEF2A88DB23004BE4ED /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEED2A88DB23004BE4ED /* DateManager.swift */; };
+		FDF8DEF02A88DB23004BE4ED /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEED2A88DB23004BE4ED /* DateManager.swift */; };
+		FDF8DEF22A88DD48004BE4ED /* ArticleTagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEF12A88DD48004BE4ED /* ArticleTagData.swift */; };
+		FDF8DEF32A88DD48004BE4ED /* ArticleTagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEF12A88DD48004BE4ED /* ArticleTagData.swift */; };
+		FDF8DEF42A88DD48004BE4ED /* ArticleTagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEF12A88DD48004BE4ED /* ArticleTagData.swift */; };
+		FDF8DEF62A88E0BA004BE4ED /* ArticleTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEF52A88E0BA004BE4ED /* ArticleTagView.swift */; };
+		FDF8DEF72A88E0BA004BE4ED /* ArticleTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEF52A88E0BA004BE4ED /* ArticleTagView.swift */; };
+		FDF8DEF82A88E0BA004BE4ED /* ArticleTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF8DEF52A88E0BA004BE4ED /* ArticleTagView.swift */; };
+		FDF8DEFA2A88E327004BE4ED /* ArticleTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF8DEF92A88E327004BE4ED /* ArticleTagView.xib */; };
+		FDF8DEFB2A88E327004BE4ED /* ArticleTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF8DEF92A88E327004BE4ED /* ArticleTagView.xib */; };
+		FDF8DEFC2A88E327004BE4ED /* ArticleTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF8DEF92A88E327004BE4ED /* ArticleTagView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,13 +183,16 @@
 		FD8D6B212A85EEA900E7FDB2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		FD935BCE2A87035C003503F2 /* UserSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchViewModel.swift; sourceTree = "<group>"; };
 		FD935BD62A870A3D003503F2 /* UserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
-		FD935BDA2A870AA6003503F2 /* UserSearchInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchInputView.swift; sourceTree = "<group>"; };
-		FD935BDE2A870AB7003503F2 /* UserSearchInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSearchInputView.xib; sourceTree = "<group>"; };
-		FD935BE22A87102B003503F2 /* UserSearchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchButtonView.swift; sourceTree = "<group>"; };
-		FD935BE62A871035003503F2 /* UserSearchButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSearchButtonView.xib; sourceTree = "<group>"; };
 		FD935BEA2A871519003503F2 /* UserSearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchButton.swift; sourceTree = "<group>"; };
 		FD93F2432A8874B8003FE73B /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		FD93F2472A88801A003FE73B /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		FD93F24B2A88C01C003FE73B /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		FDBE329D2A87A65400B5C680 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		FDF8DEE92A88D8D3004BE4ED /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		FDF8DEED2A88DB23004BE4ED /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		FDF8DEF12A88DD48004BE4ED /* ArticleTagData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTagData.swift; sourceTree = "<group>"; };
+		FDF8DEF52A88E0BA004BE4ED /* ArticleTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTagView.swift; sourceTree = "<group>"; };
+		FDF8DEF92A88E327004BE4ED /* ArticleTagView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTagView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				FDBE329D2A87A65400B5C680 /* UIImageView+.swift */,
+				FD93F2472A88801A003FE73B /* String+.swift */,
+				FDF8DEE92A88D8D3004BE4ED /* Int+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -316,14 +330,12 @@
 		FD8D6B122A85ED5800E7FDB2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FD935BDA2A870AA6003503F2 /* UserSearchInputView.swift */,
-				FD935BDE2A870AB7003503F2 /* UserSearchInputView.xib */,
-				FD935BE22A87102B003503F2 /* UserSearchButtonView.swift */,
-				FD935BE62A871035003503F2 /* UserSearchButtonView.xib */,
 				FD935BEA2A871519003503F2 /* UserSearchButton.swift */,
 				FD6493E42A871B9900C5B23C /* UserSearchInputTextField.swift */,
 				FD6493E82A871F6500C5B23C /* InspectableUIView.swift */,
 				FD6493F42A872D5900C5B23C /* UserIconImageView.swift */,
+				FDF8DEF52A88E0BA004BE4ED /* ArticleTagView.swift */,
+				FDF8DEF92A88E327004BE4ED /* ArticleTagView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,6 +389,7 @@
 			children = (
 				FD8D6B1C2A85EE2F00E7FDB2 /* UserData.swift */,
 				FD6494092A87373C00C5B23C /* ArticleListData.swift */,
+				FDF8DEF12A88DD48004BE4ED /* ArticleTagData.swift */,
 			);
 			path = Datas;
 			sourceTree = "<group>";
@@ -393,6 +406,8 @@
 			isa = PBXGroup;
 			children = (
 				FD93F2432A8874B8003FE73B /* CacheManager.swift */,
+				FD93F24B2A88C01C003FE73B /* AppTheme.swift */,
+				FDF8DEED2A88DB23004BE4ED /* DateManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -507,13 +522,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD935BDF2A870AB7003503F2 /* UserSearchInputView.xib in Resources */,
 				FD8D6AEF2A85C19300E7FDB2 /* LaunchScreen.storyboard in Resources */,
 				FD8D6AEC2A85C19300E7FDB2 /* Assets.xcassets in Resources */,
 				FD6494372A87A4B700C5B23C /* SearchHistoryCollectionViewCell.xib in Resources */,
 				FD64942F2A87802800C5B23C /* UserTableViewCell.xib in Resources */,
-				FD935BE72A871035003503F2 /* UserSearchButtonView.xib in Resources */,
 				FD6494122A87412900C5B23C /* ArticleTableViewCell.xib in Resources */,
+				FDF8DEFA2A88E327004BE4ED /* ArticleTagView.xib in Resources */,
 				FD8D6AEA2A85C19300E7FDB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,10 +537,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD6494302A87802800C5B23C /* UserTableViewCell.xib in Resources */,
-				FD935BE82A871035003503F2 /* UserSearchButtonView.xib in Resources */,
 				FD6494132A87412900C5B23C /* ArticleTableViewCell.xib in Resources */,
+				FDF8DEFB2A88E327004BE4ED /* ArticleTagView.xib in Resources */,
 				FD6494382A87A4B700C5B23C /* SearchHistoryCollectionViewCell.xib in Resources */,
-				FD935BE02A870AB7003503F2 /* UserSearchInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,10 +548,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD6494312A87802800C5B23C /* UserTableViewCell.xib in Resources */,
-				FD935BE92A871035003503F2 /* UserSearchButtonView.xib in Resources */,
 				FD6494142A87412900C5B23C /* ArticleTableViewCell.xib in Resources */,
+				FDF8DEFC2A88E327004BE4ED /* ArticleTagView.xib in Resources */,
 				FD6494392A87A4B700C5B23C /* SearchHistoryCollectionViewCell.xib in Resources */,
-				FD935BE12A870AB7003503F2 /* UserSearchInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD6494022A87361800C5B23C /* UserDetailViewModel.swift in Sources */,
+				FDF8DEEE2A88DB23004BE4ED /* DateManager.swift in Sources */,
 				FD8D6AE72A85C19300E7FDB2 /* ViewController.swift in Sources */,
 				FD8D6AE32A85C19300E7FDB2 /* AppDelegate.swift in Sources */,
 				FD6494062A8736A600C5B23C /* UserDetailModel.swift in Sources */,
@@ -678,6 +691,7 @@
 				FD8D6B182A85EDBC00E7FDB2 /* UserSearchModel.swift in Sources */,
 				FD64940A2A87373C00C5B23C /* ArticleListData.swift in Sources */,
 				FD6493E52A871B9900C5B23C /* UserSearchInputTextField.swift in Sources */,
+				FDF8DEF62A88E0BA004BE4ED /* ArticleTagView.swift in Sources */,
 				FD935BEB2A871519003503F2 /* UserSearchButton.swift in Sources */,
 				FD8D6B1D2A85EE2F00E7FDB2 /* UserData.swift in Sources */,
 				FD935BCF2A87035C003503F2 /* UserSearchViewModel.swift in Sources */,
@@ -687,16 +701,18 @@
 				FD6494272A877A6A00C5B23C /* UserConnectionType.swift in Sources */,
 				FDBE329E2A87A65400B5C680 /* UIImageView+.swift in Sources */,
 				FD8D6B222A85EEA900E7FDB2 /* APIError.swift in Sources */,
+				FDF8DEEA2A88D8D3004BE4ED /* Int+.swift in Sources */,
+				FDF8DEF22A88DD48004BE4ED /* ArticleTagData.swift in Sources */,
 				FD6494342A87A4B700C5B23C /* SearchHistoryCollectionViewCell.swift in Sources */,
 				FD6494222A8777A100C5B23C /* UserConnectionsViewModel.swift in Sources */,
 				FD6493E92A871F6500C5B23C /* InspectableUIView.swift in Sources */,
+				FD93F24C2A88C01C003FE73B /* AppTheme.swift in Sources */,
 				FD64941E2A8775F100C5B23C /* UserConnectionsModel.swift in Sources */,
 				FD6493F12A872C6500C5B23C /* UserDetailViewController.swift in Sources */,
 				FD64941A2A87756E00C5B23C /* UserConnectionsViewController.swift in Sources */,
-				FD935BE32A87102B003503F2 /* UserSearchButtonView.swift in Sources */,
+				FD93F2482A88801A003FE73B /* String+.swift in Sources */,
 				FD6493ED2A871FDC00C5B23C /* ErrorPopupViewController.swift in Sources */,
 				FD64940F2A87412900C5B23C /* ArticleTableViewCell.swift in Sources */,
-				FD935BDB2A870AA6003503F2 /* UserSearchInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,26 +720,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF8DEF72A88E0BA004BE4ED /* ArticleTagView.swift in Sources */,
 				FDBE329F2A87A65400B5C680 /* UIImageView+.swift in Sources */,
 				FD93F2452A8874B8003FE73B /* CacheManager.swift in Sources */,
 				FD935BEC2A871519003503F2 /* UserSearchButton.swift in Sources */,
+				FD93F24D2A88C01C003FE73B /* AppTheme.swift in Sources */,
 				FD8D6B1E2A85EE2F00E7FDB2 /* UserData.swift in Sources */,
+				FDF8DEF32A88DD48004BE4ED /* ArticleTagData.swift in Sources */,
+				FDF8DEEB2A88D8D3004BE4ED /* Int+.swift in Sources */,
 				FD6494032A87361800C5B23C /* UserDetailViewModel.swift in Sources */,
 				FD64941F2A8775F100C5B23C /* UserConnectionsModel.swift in Sources */,
 				FD64942D2A87802800C5B23C /* UserTableViewCell.swift in Sources */,
 				FD6494352A87A4B700C5B23C /* SearchHistoryCollectionViewCell.swift in Sources */,
 				FD6493F22A872C6500C5B23C /* UserDetailViewController.swift in Sources */,
 				FD935BD82A870A3D003503F2 /* UserSearchViewController.swift in Sources */,
+				FD93F2492A88801A003FE73B /* String+.swift in Sources */,
 				FD6494072A8736A600C5B23C /* UserDetailModel.swift in Sources */,
 				FD6494232A8777A100C5B23C /* UserConnectionsViewModel.swift in Sources */,
-				FD935BE42A87102B003503F2 /* UserSearchButtonView.swift in Sources */,
 				FD64941B2A87756E00C5B23C /* UserConnectionsViewController.swift in Sources */,
-				FD935BDC2A870AA6003503F2 /* UserSearchInputView.swift in Sources */,
 				FD6494102A87412900C5B23C /* ArticleTableViewCell.swift in Sources */,
 				FD935BD02A87035C003503F2 /* UserSearchViewModel.swift in Sources */,
 				FD8D6B232A85EEA900E7FDB2 /* APIError.swift in Sources */,
 				FD6494282A877A6A00C5B23C /* UserConnectionType.swift in Sources */,
 				FD6493F62A872D5900C5B23C /* UserIconImageView.swift in Sources */,
+				FDF8DEEF2A88DB23004BE4ED /* DateManager.swift in Sources */,
 				FD6493EA2A871F6500C5B23C /* InspectableUIView.swift in Sources */,
 				FD8D6B192A85EDBC00E7FDB2 /* UserSearchModel.swift in Sources */,
 				FD8D6AFA2A85C19400E7FDB2 /* QiitaAppTests.swift in Sources */,
@@ -740,29 +760,33 @@
 				FD6494112A87412900C5B23C /* ArticleTableViewCell.swift in Sources */,
 				FD6493F32A872C6500C5B23C /* UserDetailViewController.swift in Sources */,
 				FD6493EF2A871FDC00C5B23C /* ErrorPopupViewController.swift in Sources */,
-				FD935BE52A87102B003503F2 /* UserSearchButtonView.swift in Sources */,
+				FDF8DEF42A88DD48004BE4ED /* ArticleTagData.swift in Sources */,
 				FD6493EB2A871F6500C5B23C /* InspectableUIView.swift in Sources */,
 				FD6493E72A871B9900C5B23C /* UserSearchInputTextField.swift in Sources */,
 				FD6493F72A872D5900C5B23C /* UserIconImageView.swift in Sources */,
 				FD6494242A8777A100C5B23C /* UserConnectionsViewModel.swift in Sources */,
 				FDBE32A02A87A65400B5C680 /* UIImageView+.swift in Sources */,
+				FDF8DEF02A88DB23004BE4ED /* DateManager.swift in Sources */,
 				FD6494082A8736A600C5B23C /* UserDetailModel.swift in Sources */,
 				FD8D6B062A85C19400E7FDB2 /* QiitaAppUITestsLaunchTests.swift in Sources */,
 				FD64940C2A87373C00C5B23C /* ArticleListData.swift in Sources */,
 				FD935BD12A87035C003503F2 /* UserSearchViewModel.swift in Sources */,
+				FD93F24E2A88C01C003FE73B /* AppTheme.swift in Sources */,
 				FD6494042A87361800C5B23C /* UserDetailViewModel.swift in Sources */,
 				FD64942E2A87802800C5B23C /* UserTableViewCell.swift in Sources */,
 				FD935BD92A870A3D003503F2 /* UserSearchViewController.swift in Sources */,
 				FD8D6B1A2A85EDBC00E7FDB2 /* UserSearchModel.swift in Sources */,
 				FD6494292A877A6A00C5B23C /* UserConnectionType.swift in Sources */,
 				FD93F2462A8874B8003FE73B /* CacheManager.swift in Sources */,
-				FD935BDD2A870AA6003503F2 /* UserSearchInputView.swift in Sources */,
+				FDF8DEEC2A88D8D3004BE4ED /* Int+.swift in Sources */,
 				FD6494362A87A4B700C5B23C /* SearchHistoryCollectionViewCell.swift in Sources */,
 				FD8D6B1F2A85EE2F00E7FDB2 /* UserData.swift in Sources */,
 				FD64941C2A87756E00C5B23C /* UserConnectionsViewController.swift in Sources */,
 				FD8D6B242A85EEA900E7FDB2 /* APIError.swift in Sources */,
 				FD935BED2A871519003503F2 /* UserSearchButton.swift in Sources */,
+				FDF8DEF82A88E0BA004BE4ED /* ArticleTagView.swift in Sources */,
 				FD6494202A8775F100C5B23C /* UserConnectionsModel.swift in Sources */,
+				FD93F24A2A88801A003FE73B /* String+.swift in Sources */,
 				FD8D6B042A85C19400E7FDB2 /* QiitaAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

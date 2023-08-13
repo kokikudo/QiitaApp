@@ -1,8 +1,8 @@
 import UIKit
 
 class SearchHistoryCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var profileIconImageView: UIImageView!
+    @IBOutlet weak var baseView: InspectableUIView!
+    @IBOutlet weak var profileIconImageView: UserIconImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var userIdLabel: UILabel!
     
@@ -22,7 +22,7 @@ class SearchHistoryCollectionViewCell: UICollectionViewCell {
     
     func configureCell(_ data: UserData, selectedCompletion: (() -> Void)? = nil) {
         nameLabel.text = data.name
-        userIdLabel.text = data.id
+        userIdLabel.text = "@" + data.id.storongValue
         self.selectedCompletion = selectedCompletion
         
         guard let urlStr = data.profileImageUrl else { return }
