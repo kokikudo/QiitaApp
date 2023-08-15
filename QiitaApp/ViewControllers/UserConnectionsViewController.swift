@@ -2,13 +2,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class UserConnectionsViewController: UIViewController {
+class UserConnectionsViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
 
     private var userConnectionType: UserConnectionType?
     private let disposeBag = DisposeBag()
     private let typeSubject = PublishSubject<UserConnectionType>()
+    private let fetchEventSubject = PublishSubject<Void>()
     private var dismissCompletion: ((UserData) -> Void)?
 
     override func viewDidLoad() {
@@ -16,7 +17,7 @@ class UserConnectionsViewController: UIViewController {
 
         setupTableView()
         setupViewModel()
-        fetchType()
+        firstFetch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,8 +35,10 @@ class UserConnectionsViewController: UIViewController {
     
     private func setupViewModel() {
         let viewModel = UserConnectionsViewModel(
-            type: typeSubject.asDriver(onErrorJustReturn: .followees(userId: ""))
-            )
+            input: (
+                type: typeSubject.asObservable(),
+                fetchEvent: fetchEventSubject.asObservable()
+            ))
         
         viewModel.userData
             .compactMap { $0 }
@@ -47,12 +50,19 @@ class UserConnectionsViewController: UIViewController {
                 }
             }
             .disposed(by: disposeBag)
+        
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
     }
     
-    private func fetchType() {
+    private func firstFetch() {
         if let type = userConnectionType {
             typeSubject.onNext(type)
+            fetchEventSubject.onNext(())
         }
+    }
+    
+    private func fetchNextPage() {
+        fetchEventSubject.onNext(())
     }
     
     private func setupTableView() {
@@ -64,4 +74,29 @@ class UserConnectionsViewController: UIViewController {
             self.dismissCompletion?(data)
         }
     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let scrollViewHeight = scrollView.bounds.size.height
+        
+        if offsetY > contentHeight - scrollViewHeight - 50 {
+            fetchNextPage()
+        }
+    }
 }
+
+
+//extension UserConnectionsViewController: UITableViewDelegate {
+
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        let offsetY = scrollView.contentOffset.y
+//        let contentHeight = scrollView.contentSize.height
+//        let scrollViewHeight = scrollView.bounds.size.height
+//
+//        if offsetY > contentHeight - scrollViewHeight {
+//            fetchNextPage()
+//        }
+//    }
+//
+//}
