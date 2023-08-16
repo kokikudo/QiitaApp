@@ -100,6 +100,9 @@
 		FD93F24C2A88C01C003FE73B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F24B2A88C01C003FE73B /* AppTheme.swift */; };
 		FD93F24D2A88C01C003FE73B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F24B2A88C01C003FE73B /* AppTheme.swift */; };
 		FD93F24E2A88C01C003FE73B /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93F24B2A88C01C003FE73B /* AppTheme.swift */; };
+		FD96DE6F2A8C5522007107C0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96DE6E2A8C5522007107C0 /* LoadingView.swift */; };
+		FD96DE702A8C5522007107C0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96DE6E2A8C5522007107C0 /* LoadingView.swift */; };
+		FD96DE712A8C5522007107C0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96DE6E2A8C5522007107C0 /* LoadingView.swift */; };
 		FDBE329E2A87A65400B5C680 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE329D2A87A65400B5C680 /* UIImageView+.swift */; };
 		FDBE329F2A87A65400B5C680 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE329D2A87A65400B5C680 /* UIImageView+.swift */; };
 		FDBE32A02A87A65400B5C680 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE329D2A87A65400B5C680 /* UIImageView+.swift */; };
@@ -187,6 +190,7 @@
 		FD93F2432A8874B8003FE73B /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		FD93F2472A88801A003FE73B /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		FD93F24B2A88C01C003FE73B /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		FD96DE6E2A8C5522007107C0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FDBE329D2A87A65400B5C680 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		FDF8DEE92A88D8D3004BE4ED /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		FDF8DEED2A88DB23004BE4ED /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
@@ -336,6 +340,7 @@
 				FD6493F42A872D5900C5B23C /* UserIconImageView.swift */,
 				FDF8DEF52A88E0BA004BE4ED /* ArticleTagView.swift */,
 				FDF8DEF92A88E327004BE4ED /* ArticleTagView.xib */,
+				FD96DE6E2A8C5522007107C0 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -695,6 +700,7 @@
 				FD935BEB2A871519003503F2 /* UserSearchButton.swift in Sources */,
 				FD8D6B1D2A85EE2F00E7FDB2 /* UserData.swift in Sources */,
 				FD935BCF2A87035C003503F2 /* UserSearchViewModel.swift in Sources */,
+				FD96DE6F2A8C5522007107C0 /* LoadingView.swift in Sources */,
 				FD935BD72A870A3D003503F2 /* UserSearchViewController.swift in Sources */,
 				FD6493F52A872D5900C5B23C /* UserIconImageView.swift in Sources */,
 				FD8D6AE52A85C19300E7FDB2 /* SceneDelegate.swift in Sources */,
@@ -749,6 +755,7 @@
 				FD8D6AFA2A85C19400E7FDB2 /* QiitaAppTests.swift in Sources */,
 				FD64940B2A87373C00C5B23C /* ArticleListData.swift in Sources */,
 				FD6493EE2A871FDC00C5B23C /* ErrorPopupViewController.swift in Sources */,
+				FD96DE702A8C5522007107C0 /* LoadingView.swift in Sources */,
 				FD6493E62A871B9900C5B23C /* UserSearchInputTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -762,6 +769,7 @@
 				FD6493EF2A871FDC00C5B23C /* ErrorPopupViewController.swift in Sources */,
 				FDF8DEF42A88DD48004BE4ED /* ArticleTagData.swift in Sources */,
 				FD6493EB2A871F6500C5B23C /* InspectableUIView.swift in Sources */,
+				FD96DE712A8C5522007107C0 /* LoadingView.swift in Sources */,
 				FD6493E72A871B9900C5B23C /* UserSearchInputTextField.swift in Sources */,
 				FD6493F72A872D5900C5B23C /* UserIconImageView.swift in Sources */,
 				FD6494242A8777A100C5B23C /* UserConnectionsViewModel.swift in Sources */,

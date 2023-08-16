@@ -190,11 +190,15 @@
                                     <constraint firstItem="ujz-Hk-0Ag" firstAttribute="centerY" secondItem="nj8-tQ-0ED" secondAttribute="centerY" id="oER-A3-heg"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQj-Td-DJL" customClass="LoadingView" customModule="QiitaApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Qiita Color"/>
                         <constraints>
                             <constraint firstItem="sRL-AZ-aLB" firstAttribute="top" secondItem="Hrr-9z-lUd" secondAttribute="bottom" constant="40" id="45G-rS-V38"/>
+                            <constraint firstItem="DQj-Td-DJL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ame-Lp-Zi0"/>
                             <constraint firstItem="P6J-hh-DEZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JGM-eF-ziw"/>
                             <constraint firstItem="Hrr-9z-lUd" firstAttribute="top" secondItem="nj8-tQ-0ED" secondAttribute="bottom" id="NaD-QS-g9y"/>
                             <constraint firstItem="nj8-tQ-0ED" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OQ7-fP-Fxv"/>
@@ -205,9 +209,12 @@
                             <constraint firstItem="sRL-AZ-aLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dMf-cq-czs"/>
                             <constraint firstItem="1bS-vB-A3b" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="gZs-nU-8l3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nj8-tQ-0ED" secondAttribute="trailing" id="jcu-eQ-UIN"/>
+                            <constraint firstItem="DQj-Td-DJL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kP0-fh-r3j"/>
                             <constraint firstItem="Hrr-9z-lUd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kej-FA-2bR"/>
                             <constraint firstItem="P6J-hh-DEZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kuM-kz-Pfp"/>
                             <constraint firstItem="P6J-hh-DEZ" firstAttribute="top" secondItem="Hrr-9z-lUd" secondAttribute="bottom" id="n4k-x5-Kc6"/>
+                            <constraint firstItem="DQj-Td-DJL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rKE-wg-deq"/>
+                            <constraint firstAttribute="bottom" secondItem="DQj-Td-DJL" secondAttribute="bottom" id="saJ-Vr-6oN"/>
                             <constraint firstAttribute="bottom" secondItem="sRL-AZ-aLB" secondAttribute="bottom" id="xbA-SV-SnL"/>
                             <constraint firstItem="nj8-tQ-0ED" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zdv-cq-3L5"/>
                         </constraints>
@@ -215,6 +222,7 @@
                     <navigationItem key="navigationItem" id="n0I-TY-tev"/>
                     <connections>
                         <outlet property="collectionView" destination="LW6-QO-8lD" id="Tgw-Bw-z7V"/>
+                        <outlet property="loadingView" destination="DQj-Td-DJL" id="Rv6-jG-Ai6"/>
                         <outlet property="userSearchButton" destination="1bS-vB-A3b" id="nmr-ld-I4L"/>
                         <outlet property="userSearchTextField" destination="8jE-hW-fB6" id="MV4-bj-ejE"/>
                     </connections>
@@ -363,10 +371,16 @@
                                 <rect key="frame" x="0.0" y="370.66666666666674" width="390" height="439.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kY-Sy-S7I" customClass="LoadingView" customModule="QiitaApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZIM-UF-WbK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ZIM-UF-WbK" firstAttribute="trailing" secondItem="7kY-Sy-S7I" secondAttribute="trailing" id="0Ba-Vs-0wc"/>
+                            <constraint firstItem="7kY-Sy-S7I" firstAttribute="top" secondItem="Ghh-b1-izO" secondAttribute="topMargin" id="7dD-r3-Ht8"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="7kY-Sy-S7I" secondAttribute="bottom" id="8bs-QR-5Ze"/>
                             <constraint firstItem="ZIM-UF-WbK" firstAttribute="trailing" secondItem="xqb-C9-qHw" secondAttribute="trailing" id="Kge-54-wSp"/>
                             <constraint firstItem="ZIM-UF-WbK" firstAttribute="bottom" secondItem="xqb-C9-qHw" secondAttribute="bottom" id="TwJ-a7-pYE"/>
                             <constraint firstItem="xqb-C9-qHw" firstAttribute="top" secondItem="gDu-4K-qst" secondAttribute="bottom" constant="16" id="ash-6e-cBr"/>
@@ -374,6 +388,7 @@
                             <constraint firstItem="gDu-4K-qst" firstAttribute="centerX" secondItem="Ghh-b1-izO" secondAttribute="centerX" id="ixj-jB-StL"/>
                             <constraint firstItem="xqb-C9-qHw" firstAttribute="leading" secondItem="ZIM-UF-WbK" secondAttribute="leading" id="o8s-v3-jj1"/>
                             <constraint firstItem="gDu-4K-qst" firstAttribute="top" secondItem="ZIM-UF-WbK" secondAttribute="top" constant="20" id="qoI-B9-bj3"/>
+                            <constraint firstItem="7kY-Sy-S7I" firstAttribute="leading" secondItem="ZIM-UF-WbK" secondAttribute="leading" id="rnG-HY-uhF"/>
                             <constraint firstItem="gDu-4K-qst" firstAttribute="width" secondItem="Ghh-b1-izO" secondAttribute="width" multiplier="0.85" id="wA2-zO-u3W"/>
                         </constraints>
                     </view>
@@ -383,6 +398,7 @@
                         <outlet property="followeesStackView" destination="r5C-n1-ut2" id="Mfg-aF-o1L"/>
                         <outlet property="followersCountLabel" destination="Eb3-mO-8sx" id="S8m-JR-AWf"/>
                         <outlet property="followersStackView" destination="qww-bh-KiL" id="maa-CF-Nsy"/>
+                        <outlet property="loadingView" destination="7kY-Sy-S7I" id="amm-Zi-ERT"/>
                         <outlet property="tableView" destination="xqb-C9-qHw" id="XDu-22-vIV"/>
                         <outlet property="userIconImageView" destination="D6N-df-r6L" id="Sc4-Kb-Tn4"/>
                         <outlet property="userIdLabel" destination="yRZ-ZN-pd0" id="AtL-cf-QiW"/>

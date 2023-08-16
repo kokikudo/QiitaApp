@@ -7,15 +7,23 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var likesCount: UILabel!
     @IBOutlet weak var tagsStackView: UIStackView!
     
+    private var selectedCompletion: (() -> Void)?
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        if selected { selectedCompletion?() }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configureCell(_ data: ArticleData) {
+    func configureCell(_ data: ArticleData, selectedCompletion: (() -> Void)? = nil) {
         createDateLabel.text = DateManager.convertDateString(dateString: data.createdAt.storongValue)
         titleLabel.text = data.title
         likesCount.text = data.likeCount.strongValue.description
-        
+        self.selectedCompletion = selectedCompletion
+
         guard let tags = data.tags else { return }
         removeAllStackSubviews()
         for tag in tags {

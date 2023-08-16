@@ -6,6 +6,7 @@ class UserSearchViewController: UIViewController {
     @IBOutlet weak var userSearchTextField: UserSearchInputTextField!
     @IBOutlet weak var userSearchButton: UserSearchButton!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var loadingView: LoadingView!
     
     private let cacheLoadSubject = PublishSubject<Void>()
     private let disposeBag = DisposeBag()
@@ -40,6 +41,11 @@ class UserSearchViewController: UIViewController {
             .drive(onNext: { [weak self] isEnabled in
                 self?.userSearchButton.isEnabled = isEnabled
             })
+            .disposed(by: disposeBag)
+        
+        viewModel.isLoading
+            .map { !$0 }
+            .drive(loadingView.rx.isHidden)
             .disposed(by: disposeBag)
         
         viewModel.userData

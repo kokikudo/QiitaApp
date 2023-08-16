@@ -4,7 +4,7 @@ import RxCocoa
 import RxGesture
 import SafariServices
 
-class UserDetailViewController: UIViewController {
+class UserDetailViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var userIconImageView: UserIconImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -15,19 +15,23 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var followersStackView: UIStackView!
     @IBOutlet weak var followersCountLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingView: LoadingView!
     
     private var userData: UserData?
     private let disposeBag = DisposeBag()
-    private var model = UserDetailViewModel()
-
+    private let userIdSubject = PublishSubject<String>()
+    private let fetchEventSubject = PublishSubject<Void>()
+    private var viewModel: UserDetailViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViewModel()
+        addGesturesToStackView()
         setupTitle()
         setupTableView()
         setupViews()
-        model.fetchArticles(userId: userData?.id)
-        bind()
+        firstFetch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +44,31 @@ class UserDetailViewController: UIViewController {
     
     func setData(_ data: UserData) {
         userData = data
+    }
+    
+    private func setupViewModel() {
+        guard viewModel == nil else { return }
+        viewModel = UserDetailViewModel(
+            input: (
+                id: userIdSubject.asObservable(),
+                fetchEvent: fetchEventSubject.asObservable()
+            ))
+        
+        viewModel?.articleDataList
+            .compactMap { $0 }
+            .drive(tableView.rx.items(cellIdentifier: "ArticleTableViewCell")) { index, item, cell in
+                if let cell = cell as? ArticleTableViewCell {
+                    cell.configureCell(item, selectedCompletion: {
+                        self.showArticleDetail(with: item)
+                    })
+                }
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel?.isLoading
+            .map { !$0 }
+            .drive(loadingView.rx.isHidden)
+            .disposed(by: disposeBag)
     }
     
     private func setupTitle() {
@@ -57,22 +86,33 @@ class UserDetailViewController: UIViewController {
     private func updateData(_ data: UserData) {
         userData = data
         setupViews()
-        model.fetchArticles(userId: userData?.id)
+        resetViewModel()
     }
     
-    private func bind() {
-        model.articlesReloadEvent.subscribe(onNext: { [weak self] _ in
-            self?.tableView.reloadData()
-        })
-        .disposed(by: disposeBag)
-        
-        addGesturesToStackView()
+    private func resetViewModel() {
+        viewModel = nil
+        tableView.delegate = nil
+        tableView.dataSource = nil
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        setupViewModel()
+        firstFetch()
+    }
+    
+    private func firstFetch() {
+        if let id = userData?.id {
+            userIdSubject.onNext(id)
+            fetchEventSubject.onNext(())
+        }
+    }
+    
+    private func fetchNextPage() {
+        fetchEventSubject.onNext(())
     }
     
     private func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
         tableView.separatorStyle = .none
+        tableView.rowHeight = 140
         tableView.register(UINib(nibName: "ArticleTableViewCell", bundle: nil),forCellReuseIdentifier:"ArticleTableViewCell")
 
     }
@@ -122,7 +162,6 @@ class UserDetailViewController: UIViewController {
                 self.updateData(userData)
             }))
             present(vc, animated: true)
-            //navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -148,30 +187,14 @@ class UserDetailViewController: UIViewController {
         let vc = SFSafariViewController(url: url)
         navigationController?.pushViewController(vc, animated: true)
     }
-}
-
-extension UserDetailViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let article = model.getArticles()[indexPath.row]
-        showArticleDetail(with: article)
-    }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
-    }
-}
-
-extension UserDetailViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.getArticles().count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleTableViewCell", for: indexPath) as? ArticleTableViewCell else {
-            return UITableViewCell()
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let scrollViewHeight = scrollView.bounds.size.height
+        
+        if offsetY > contentHeight - scrollViewHeight - 50 {
+            fetchNextPage()
         }
-                
-        cell.configureCell(model.getArticles()[indexPath.row])
-        return cell
     }
 }

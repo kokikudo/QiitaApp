@@ -16,9 +16,7 @@ class UserTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        if selected {
-            selectedCompletion?()
-        }
+        if selected { selectedCompletion?() }
     }
     
     func configureCell(_ data: UserData, selectedCompletion: (() -> Void)? = nil) {
