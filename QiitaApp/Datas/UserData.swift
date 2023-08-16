@@ -11,9 +11,10 @@ struct UserData: Codable {
 
 extension UserData {
     init?(with data: [String: Any]) {
-
+        guard let id = data["id"] as? String else { return nil }
+        
+        self.id = id
         self.profileImageUrl = data["profile_image_url"] as? String
-        self.id = data["id"] as? String
         self.followeesCount = data["followees_count"] as? Int
         self.followersCount = data["followers_count"] as? Int
         
