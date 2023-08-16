@@ -85,6 +85,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate {
     
     private func updateData(_ data: UserData) {
         userData = data
+        setupTitle()
         setupViews()
         resetViewModel()
     }

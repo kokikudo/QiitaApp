@@ -7,9 +7,9 @@ enum UserConnectionType {
     var title: String {
         switch self {
         case .followees(_):
-            return "フォローリスト"
+            return "Followees"
         case .followers(_):
-            return "フォロワーリスト"
+            return "Followers"
         }
     }
     

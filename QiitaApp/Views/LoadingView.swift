@@ -34,8 +34,7 @@ class LoadingView: UIView {
         backgroundColor = .clear
         
         let center = center
-        let yOffset: CGFloat = -100
-        spinner.center = CGPoint(x: center.x, y: center.y + yOffset)
+        spinner.center = CGPoint(x: center.x, y: center.y + getYOffset())
         addSubview(spinner)
     }
     
@@ -45,5 +44,13 @@ class LoadingView: UIView {
     
     func stopAnimating() {
         activityIndicator.stopAnimating()
+    }
+    
+    func getYOffset() -> CGFloat {
+        if let nc = window?.rootViewController?.navigationController {
+            return -(nc.navigationBar.frame.size.height)
+        } else {
+            return -100
+        }
     }
 }
