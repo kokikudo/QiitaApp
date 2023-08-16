@@ -381,30 +381,53 @@
             <objects>
                 <viewController storyboardIdentifier="UserConnectionsViewController" id="kgS-Pp-7bz" customClass="UserConnectionsViewController" customModule="QiitaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yeM-BY-4Bg">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UdG-iO-uNa">
-                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <rect key="frame" x="0.0" y="50" width="390" height="737"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhk-oA-i4X">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q3-81-Y0j">
+                                        <rect key="frame" x="176.66666666666666" y="5" width="36.666666666666657" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Qiita Color"/>
+                                <constraints>
+                                    <constraint firstItem="1q3-81-Y0j" firstAttribute="centerY" secondItem="Hhk-oA-i4X" secondAttribute="centerY" id="6J8-TO-XSn"/>
+                                    <constraint firstItem="1q3-81-Y0j" firstAttribute="centerX" secondItem="Hhk-oA-i4X" secondAttribute="centerX" id="Q03-K2-akU"/>
+                                    <constraint firstAttribute="bottom" secondItem="1q3-81-Y0j" secondAttribute="bottom" constant="5" id="lhY-UV-GLa"/>
+                                    <constraint firstAttribute="height" constant="50" id="t2g-uj-6Rl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qmW-Wv-oFG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qmW-Wv-oFG" firstAttribute="trailing" secondItem="UdG-iO-uNa" secondAttribute="trailing" id="6mh-sK-3wq"/>
+                            <constraint firstItem="qmW-Wv-oFG" firstAttribute="trailing" secondItem="Hhk-oA-i4X" secondAttribute="trailing" id="BcL-YA-MHi"/>
                             <constraint firstItem="UdG-iO-uNa" firstAttribute="leading" secondItem="qmW-Wv-oFG" secondAttribute="leading" id="Cv1-oO-vnL"/>
                             <constraint firstItem="qmW-Wv-oFG" firstAttribute="bottom" secondItem="UdG-iO-uNa" secondAttribute="bottom" id="FpO-uW-jwh"/>
-                            <constraint firstItem="UdG-iO-uNa" firstAttribute="top" secondItem="qmW-Wv-oFG" secondAttribute="top" id="nN6-sY-Ywp"/>
+                            <constraint firstItem="Hhk-oA-i4X" firstAttribute="top" secondItem="yeM-BY-4Bg" secondAttribute="top" id="Kgd-s2-MbI"/>
+                            <constraint firstItem="Hhk-oA-i4X" firstAttribute="leading" secondItem="qmW-Wv-oFG" secondAttribute="leading" id="htg-Pw-e5U"/>
+                            <constraint firstItem="UdG-iO-uNa" firstAttribute="top" secondItem="Hhk-oA-i4X" secondAttribute="bottom" id="jBd-5y-hCb"/>
                         </constraints>
                     </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="UdG-iO-uNa" id="uLt-xR-EgQ"/>
+                        <outlet property="titleLabel" destination="1q3-81-Y0j" id="zff-q0-zbw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sn5-zV-CJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2814" y="-16"/>
+            <point key="canvasLocation" x="2813.8461538461538" y="-16.350710900473931"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aSo-gV-cVs">
@@ -431,13 +454,13 @@
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="star.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="FolloweesIconColor">
-            <color red="0.18196699020000001" green="0.1960422695" blue="0.1960422695" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18199999630451202" green="0.19599999487400055" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="FollowersIconColor">
-            <color red="0.97967308760000005" green="0.83119851349999996" blue="0.4796975255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98000001907348633" green="0.83099997043609619" blue="0.47999998927116394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Qiita Color">
-            <color red="0.33314168449999998" green="0.77097648379999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.33300000429153442" green="0.77100002765655518" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -4,6 +4,7 @@ import RxCocoa
 
 class UserConnectionsViewController: UIViewController, UITableViewDelegate {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
     private var userConnectionType: UserConnectionType?
@@ -18,6 +19,7 @@ class UserConnectionsViewController: UIViewController, UITableViewDelegate {
         setupTableView()
         setupViewModel()
         firstFetch()
+        titleLabel.text = userConnectionType?.title
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,18 +87,3 @@ class UserConnectionsViewController: UIViewController, UITableViewDelegate {
         }
     }
 }
-
-
-//extension UserConnectionsViewController: UITableViewDelegate {
-
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        let offsetY = scrollView.contentOffset.y
-//        let contentHeight = scrollView.contentSize.height
-//        let scrollViewHeight = scrollView.bounds.size.height
-//
-//        if offsetY > contentHeight - scrollViewHeight {
-//            fetchNextPage()
-//        }
-//    }
-//
-//}

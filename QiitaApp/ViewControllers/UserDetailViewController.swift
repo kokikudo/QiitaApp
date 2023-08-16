@@ -121,7 +121,8 @@ class UserDetailViewController: UIViewController {
             vc.setData(type, dismissCompletion: ({ userData in
                 self.updateData(userData)
             }))
-            navigationController?.pushViewController(vc, animated: true)
+            present(vc, animated: true)
+            //navigationController?.pushViewController(vc, animated: true)
         }
     }
     

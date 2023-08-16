@@ -4,6 +4,15 @@ enum UserConnectionType {
     case followees(userId: String)
     case followers(userId: String)
     
+    var title: String {
+        switch self {
+        case .followees(_):
+            return "フォローリスト"
+        case .followers(_):
+            return "フォロワーリスト"
+        }
+    }
+    
     var apiPath: String {
         switch self {
         case .followees(let userId):
