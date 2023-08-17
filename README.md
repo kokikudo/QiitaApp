@@ -26,16 +26,21 @@ cd QiitaApp
 sudo gem install cocoapods
 ```
 
-4. CocoaPodsを使用して必要な依存関係をインストールします：
+4. CocoaPodsを初期化しPodflieを生成します：
+```bash
+pod init
+```
+
+5. Podfileを開いて必要なライブラリをインストールします：
 ```ruby
 target 'QiitaApp' do
-  # 2. ここに以下のコードを追加
+  # ここに以下のコードを追加
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxGesture'
   
-  # 3. 以下のコードはそのまま
+  # 以下のコードはそのまま
 end
 
 ```
@@ -43,7 +48,7 @@ end
 pod install
 ```
 
-5. 新たに生成されたQiitaApp.xcworkspaceを開きます
+6. 新たに生成されたQiitaApp.xcworkspaceを開きます
 
 ## 使い方
 1. iOSシミュレーターまたはデバイスでアプリを起動します。
