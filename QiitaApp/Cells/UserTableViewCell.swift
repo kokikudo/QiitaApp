@@ -2,7 +2,7 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var profileIconImageView: UIImageView!
+    @IBOutlet weak var profileIconImageView: UserIconImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var userIdLabel: UILabel!
     @IBOutlet weak var followeesCountLabel: UILabel!

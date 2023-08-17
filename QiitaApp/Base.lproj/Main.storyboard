@@ -134,6 +134,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーID(@から始まる文字)を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jE-hW-fB6" customClass="UserSearchInputTextField" customModule="QiitaApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="195" height="34"/>
+                                        <color key="tintColor" name="Qiita Color"/>
                                         <fontDescription key="fontDescription" name="PTSerif-Regular" family="PT Serif" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -143,6 +144,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Search" image="magnifyingglass" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -163,7 +165,7 @@
                                 <rect key="frame" x="0.0" y="439" width="390" height="371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abo-pl-nyJ">
-                                        <rect key="frame" x="16" y="80.666666666666629" width="358" height="20"/>
+                                        <rect key="frame" x="16" y="83" width="358" height="17.666666666666671"/>
                                         <fontDescription key="fontDescription" name="PTSerif-Regular" family="PT Serif" pointSize="15"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -455,21 +457,29 @@
                                     <constraint firstAttribute="height" constant="50" id="t2g-uj-6Rl"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-sn-3bD" customClass="LoadingView" customModule="QiitaApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qmW-Wv-oFG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qmW-Wv-oFG" firstAttribute="trailing" secondItem="UdG-iO-uNa" secondAttribute="trailing" id="6mh-sK-3wq"/>
+                            <constraint firstItem="qmW-Wv-oFG" firstAttribute="trailing" secondItem="6IA-sn-3bD" secondAttribute="trailing" id="AiO-CR-pmv"/>
                             <constraint firstItem="qmW-Wv-oFG" firstAttribute="trailing" secondItem="Hhk-oA-i4X" secondAttribute="trailing" id="BcL-YA-MHi"/>
                             <constraint firstItem="UdG-iO-uNa" firstAttribute="leading" secondItem="qmW-Wv-oFG" secondAttribute="leading" id="Cv1-oO-vnL"/>
                             <constraint firstItem="qmW-Wv-oFG" firstAttribute="bottom" secondItem="UdG-iO-uNa" secondAttribute="bottom" id="FpO-uW-jwh"/>
                             <constraint firstItem="Hhk-oA-i4X" firstAttribute="top" secondItem="yeM-BY-4Bg" secondAttribute="top" id="Kgd-s2-MbI"/>
+                            <constraint firstItem="6IA-sn-3bD" firstAttribute="leading" secondItem="qmW-Wv-oFG" secondAttribute="leading" id="dn1-ro-TVb"/>
                             <constraint firstItem="Hhk-oA-i4X" firstAttribute="leading" secondItem="qmW-Wv-oFG" secondAttribute="leading" id="htg-Pw-e5U"/>
                             <constraint firstItem="UdG-iO-uNa" firstAttribute="top" secondItem="Hhk-oA-i4X" secondAttribute="bottom" id="jBd-5y-hCb"/>
+                            <constraint firstItem="qmW-Wv-oFG" firstAttribute="bottom" secondItem="6IA-sn-3bD" secondAttribute="bottom" id="miF-T7-npq"/>
+                            <constraint firstItem="6IA-sn-3bD" firstAttribute="top" secondItem="yeM-BY-4Bg" secondAttribute="top" id="qus-wd-XcS"/>
                         </constraints>
                     </view>
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="loadingView" destination="6IA-sn-3bD" id="956-L3-RZx"/>
                         <outlet property="tableView" destination="UdG-iO-uNa" id="uLt-xR-EgQ"/>
                         <outlet property="titleLabel" destination="1q3-81-Y0j" id="zff-q0-zbw"/>
                     </connections>

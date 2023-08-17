@@ -6,7 +6,8 @@ class UserConnectionsViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var loadingView: LoadingView!
+    
     private var userConnectionType: UserConnectionType?
     private let disposeBag = DisposeBag()
     private let typeSubject = PublishSubject<UserConnectionType>()
@@ -53,6 +54,11 @@ class UserConnectionsViewController: UIViewController, UITableViewDelegate {
             }
             .disposed(by: disposeBag)
         
+        viewModel.isLoading
+            .map { !$0 }
+            .drive(loadingView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
     }
     
@@ -68,6 +74,7 @@ class UserConnectionsViewController: UIViewController, UITableViewDelegate {
     }
     
     private func setupTableView() {
+        tableView.rowHeight = 75
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil),forCellReuseIdentifier:"UserTableViewCell")
     }
     

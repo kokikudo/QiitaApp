@@ -3,16 +3,13 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="PTSerif-Regular.ttf">
             <string>PTSerif-Regular</string>
-        </array>
-        <array key="TimesNewRoman.ttf">
-            <string>.SFUI-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -25,35 +22,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="264" height="74"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dj2-gd-v21">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dj2-gd-v21" customClass="UserIconImageView" customModule="QiitaApp" customModuleProvider="target">
                         <rect key="frame" x="16" y="16" width="37" height="37"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Dj2-gd-v21" secondAttribute="height" id="xa1-Ih-nB3"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-EY-X3w">
-                        <rect key="frame" x="69" y="16" width="81.333333333333314" height="15.666666666666664"/>
+                        <rect key="frame" x="69" y="16" width="91.666666666666686" height="17"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn6-Km-6wl">
-                                <rect key="frame" x="0.0" y="0.0" width="60" height="15.666666666666666"/>
-                                <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="14"/>
+                                <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkd-1M-cDe">
-                                <rect key="frame" x="65" y="2.666666666666667" width="16.333333333333329" height="11.666666666666664"/>
-                                <fontDescription key="fontDescription" name="PTSerif-Regular" family="PT Serif" pointSize="10"/>
+                                <rect key="frame" x="73.333333333333343" y="3.6666666666666679" width="18.333333333333329" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="CT8-1R-ccu">
-                        <rect key="frame" x="69" y="41.666666666666664" width="80" height="14.333333333333336"/>
+                        <rect key="frame" x="69" y="43" width="80" height="14.333333333333336"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-rB-MJY">
-                                <rect key="frame" x="0.0" y="0.99999999999999822" width="14.333333333333334" height="13.000000000000002"/>
-                                <color key="tintColor" systemColor="systemYellowColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.square.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-rB-MJY">
+                                <rect key="frame" x="0.0" y="1.6666666666666643" width="14.333333333333334" height="11.333333333333336"/>
+                                <color key="tintColor" name="FolloweesIconColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ckt-rB-MJY" secondAttribute="height" id="Q28-UM-rPk"/>
                                 </constraints>
@@ -76,11 +73,11 @@
                         </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="zwl-vp-9Ji">
-                        <rect key="frame" x="159" y="41.666666666666664" width="78" height="14.333333333333336"/>
+                        <rect key="frame" x="159" y="43" width="78" height="14.333333333333336"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-pO-MZ6">
-                                <rect key="frame" x="0.0" y="0.99999999999999822" width="14.333333333333334" height="13.000000000000002"/>
-                                <color key="tintColor" systemColor="systemYellowColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-pO-MZ6">
+                                <rect key="frame" x="0.0" y="-0.33333333333333215" width="14.333333333333334" height="14"/>
+                                <color key="tintColor" name="FollowersIconColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hpb-pO-MZ6" secondAttribute="height" id="DT9-GA-LsW"/>
                                 </constraints>
@@ -122,16 +119,20 @@
                 <outlet property="followeesCountLabel" destination="pKx-cD-UNo" id="KsG-dE-Pm4"/>
                 <outlet property="followersCountLabel" destination="1DA-fH-AVq" id="sfX-Pm-zfR"/>
                 <outlet property="nameLabel" destination="jn6-Km-6wl" id="Avs-v4-Dki"/>
-                <outlet property="profileIconImageView" destination="Dj2-gd-v21" id="Bve-bH-rBm"/>
+                <outlet property="profileIconImageView" destination="Dj2-gd-v21" id="kg2-y8-3DB"/>
                 <outlet property="userIdLabel" destination="dkd-1M-cDe" id="7gc-jJ-kS6"/>
             </connections>
             <point key="canvasLocation" x="-49.230769230769226" y="-0.7109004739336493"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="star.circle" catalog="system" width="128" height="123"/>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="star.square.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="FolloweesIconColor">
+            <color red="0.18199999630451202" green="0.19599999487400055" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FollowersIconColor">
+            <color red="0.98000001907348633" green="0.83099997043609619" blue="0.47999998927116394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -5,7 +5,8 @@ import UIKit
 final class UserConnectionsViewModel {
     
     let userData: Driver<[UserData]?>
-    
+    let isLoading: Driver<Bool>
+
     init(
         input: (
             type: Observable<UserConnectionType>,
@@ -14,8 +15,14 @@ final class UserConnectionsViewModel {
             
             let model = UserConnectionsModel()
             
+            let isLoadingRelay = PublishRelay<Bool>()
+            isLoading = isLoadingRelay.asDriver(onErrorJustReturn: false)
+            
             let pageCount = input.fetchEvent
                 .throttle(RxTimeInterval.seconds(2), scheduler: MainScheduler.instance)
+                .do(onNext: { _ in
+                    isLoadingRelay.accept(true)
+                })
                 .scan(into: 0, accumulator: { (sum, _) in
                     sum += 1
                 })
@@ -32,5 +39,8 @@ final class UserConnectionsViewModel {
                     sum?.append(contentsOf: data)
                 })
                 .asDriver(onErrorJustReturn: nil)
+                .do(onNext: { _ in
+                    isLoadingRelay.accept(false)
+                })
         }
 }
